@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/akhilesh-patel/mysql-argocd.git
-    path: mysql-chart \
+    path: mysql-chart
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
