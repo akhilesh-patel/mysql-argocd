@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: mysql
+  tag: "8"
+
+service:
+  type: ClusterIP
+  port: 3306
+
+appName: mysql
+namespace: laravel-app
+
+config:
+  MYSQL_DATABASE: "laravel"
+  MYSQL_USER: "laravel_user"
+
+secrets:
+  MYSQL_PASSWORD: "password"
+  MYSQL_ROOT_PASSWORD: "rootpassword"
+
+persistence:
+  size: 5Gi
+  storageClass: ""
+
+hostPath: "/data/mysql"
