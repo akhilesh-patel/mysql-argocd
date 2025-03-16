@@ -21,6 +21,6 @@ secrets:
 
 persistence:
   size: 5Gi
-  storageClass: ""
+  storageClass: "standard"
 
 hostPath: "/pv"
