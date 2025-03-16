@@ -1,11 +1,11 @@
-replicaCount: 3
+replicaCount: 1
 
 image:
   repository: mysql
   tag: "8"
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 3306
 
 appName: mysql
@@ -23,4 +23,4 @@ persistence:
   size: 5Gi
   storageClass: ""
 
-hostPath: "/data/mysql"
+hostPath: "/pv"
